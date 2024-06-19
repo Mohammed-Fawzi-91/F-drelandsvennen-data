@@ -1,6 +1,6 @@
 /**
  * jeg brukte url og proxy url til å vise min forstårelse på APIer,
- *  men samtidig henter jeg data fra lokalt json hvis function klarer ikke å fetch()
+ *  men samtidig henter jeg data fra lokal .json hvis function  ikke klarer å fetch()
  * 
  * 
  */
@@ -25,7 +25,7 @@ const fetchData = async () => {
             const response = await fetch('data.json');
             if (!response.ok) {
                 const message = document.getElementById('wrong-msg');
-            message.innerHTML = '<h2> Det er en feil ved henting av data fra APIer, og det finnes ingen lokalt data</h2>';
+            message.innerHTML = '<h2> Det er en feil ved henting av data fra APIer, og det finnes ingen lokal data</h2>';
                 throw new Error('Kunne ikke hente lokal data: ' + response.status);
             }
             const data = await response.json();
