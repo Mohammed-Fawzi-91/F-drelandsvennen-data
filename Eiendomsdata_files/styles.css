@@ -1,0 +1,235 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #5391d3, #b4d0ef);
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+h1 {
+    text-align: center;
+    color: rgb(18, 2, 2);
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+}
+
+/* City knapper */
+#city-container{
+    background-color: rgb(211, 217, 220);
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-bottom: 200px;
+
+}
+.city-button {
+    display: block;
+    width: 970px;
+    color: rgb(18, 2, 2);
+    border: none;
+    cursor: pointer;
+    height: 70px;
+    font-size: large;
+    background-color: rgb(211, 217, 220);
+    border-bottom: solid;
+    align-items: center;
+    
+}
+
+.city-button:hover {
+    background-color:#a3c5ed;
+    font-weight: bolder;
+}
+
+/* City tabeller */
+.city-table {
+    display: none;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: rgb(211, 217, 220);
+    padding: 0px;
+}
+
+.city-table.show {
+    display: block;
+    max-height: 500px; 
+    background-color: rgb(211, 217, 220);
+}
+
+.city-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(211, 217, 220);
+    overflow: hidden;
+    
+}
+
+.city-table th,
+.city-table td {
+    padding: 18px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: large;
+    
+}
+
+.city-table th {
+    background-color: rgb(211, 217, 220);
+    color: white;
+}
+
+.city-table tbody tr:hover {
+    background: linear-gradient(135deg, #5391d3, #b4d0ef);
+}
+
+/* SVG icons */
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.red-icon path {
+    fill: red;
+}
+
+.green-icon path {
+    fill: green;
+}
+
+.gray-icon path {
+    fill: gray;
+}
+
+/* Charts */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    width: 950px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.bar {
+    width: 30px;
+    background-color: rgb(4, 54, 161);
+    display: block;
+    margin-bottom: 10px;
+    transition: height 0.3s ease;
+}
+
+.bar-label {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* For screens smaller than 768px (tablets and smaller devices) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjusted width for smaller screens */
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 30px; /* Adjusted font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 15px; /* Adjusted font size for smaller screens */
+    }
+
+    #city-container {
+      
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width:max-content;
+    
+    }
+    .city-table {
+     width: 700px;
+    }
+
+    .city-button {
+        width: 700px; /* Adjusted width for smaller screens */
+        max-width: 100%; /* Ensure button does not overflow */
+        font-size: 15px; /* Adjusted font size for smaller screens */
+        padding: 5px; /* Adjusted padding for smaller screens */
+    }
+
+    .chart-container {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 100%; /* Ensure chart container does not overflow */
+        padding: 5px; /* Adjusted padding for smaller screens */
+        margin: 10px auto; /* Center align with auto margin */
+    }
+}
+
+/* For screens smaller than 480px (most smartphones) */
+@media (max-width: 480px) {
+    
+
+    h1 {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 10px; /* Adjusted font size for smaller screens */
+    }
+
+    #city-container {
+      
+    display: flex;
+
+    align-items: center; 
+    width:480px;
+    
+    }
+    .city-table {
+     width: 400px;
+    }
+
+    .city-button {
+        width: 480px; /* Adjusted width for smaller screens */
+        font-size: 15px; /* Adjusted font size for smaller screens */
+    }
+
+    .chart-container {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 100%; /* Ensure chart container does not overflow */
+    }
+}

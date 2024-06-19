@@ -1,0 +1,280 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #5391d3, #b4d0ef);
+    max-width: fit-content 800px;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+h1 {
+    text-align: center;
+    color: rgb(18, 2, 2);
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+}
+
+/* City knapper */
+#city-container{
+    background-color: rgb(211, 217, 220);
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-bottom: 200px;
+
+}
+.city-button {
+    display: block;
+    width: 970px;
+    color: rgb(18, 2, 2);
+    border: none;
+    cursor: pointer;
+    height: 70px;
+    font-size: large;
+    background-color: rgb(211, 217, 220);
+    border-bottom: solid;
+    align-items: center;
+    
+}
+
+.city-button:hover {
+    background-color:#a3c5ed;
+    font-weight: bolder;
+}
+
+/* City tabeller */
+.city-table {
+    display: none;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: rgb(211, 217, 220);
+    padding: 0px;
+}
+
+.city-table.show {
+    display: block;
+    max-height: 500px; 
+    background-color: rgb(211, 217, 220);
+}
+
+.city-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(211, 217, 220);
+    overflow: hidden;
+    
+}
+
+.city-table th,
+.city-table td {
+    padding: 18px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: large;
+    
+}
+
+.city-table th {
+    background-color: rgb(211, 217, 220);
+    color: white;
+}
+
+.city-table tbody tr:hover {
+    background: linear-gradient(135deg, #5391d3, #b4d0ef);
+}
+
+/* SVG icons */
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.red-icon path {
+    fill: red;
+}
+
+.green-icon path {
+    fill: green;
+}
+
+.gray-icon path {
+    fill: gray;
+}
+
+/* Charts */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    width: 950px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.bar {
+    width: 30px;
+    background-color: rgb(4, 54, 161);
+    display: block;
+    margin-bottom: 10px;
+    transition: height 0.3s ease;
+}
+
+.bar-label {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* skjermer mindre en 768 */
+@media (max-width: 768px) {
+    body {
+        max-width: fit-content 700px;
+      
+          }
+    .container {
+        width: 95%; 
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 30px; 
+    }
+
+    h2 {
+        font-size: 15px; 
+    }
+
+    #city-container {
+      
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width:max-content;
+    
+    }
+    .city-table {
+     width: 700px;
+    }
+
+    .city-button {
+        width: 700px; 
+        max-width: 100%; 
+        font-size: 15px; 
+        padding: 5px; 
+    }
+
+    .chart-container {
+        width: 100%; 
+        max-width: 100%; 
+        padding: 5px; 
+        margin: 10px auto; 
+    }
+}
+.city-table td {
+    padding: 18px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 15px;
+    
+}
+
+/* skjermer mindre en 480px */
+@media (max-width: 480px) {
+    
+    body {
+  max-width: fit-content 300px;
+
+    }
+    h1 {
+        font-size: 20px; 
+    }
+
+    h2 {
+        font-size: 10px; 
+    }
+
+    #city-container {
+      
+    display: flex;
+
+
+    align-items: center; 
+    width:auto;
+    
+    }
+    .city-table {
+     width: 300px;
+    }
+
+    .city-button {
+        max-width:300px;
+        font-size: 15px; 
+    }
+
+    .chart-container {
+        width: 100%; 
+        max-width: 100%; 
+        
+    }
+    .city-table th,
+.city-table td {
+    padding: 18px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 10px;
+    
+}
+.bar-wrapper {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.bar {
+    width: 5px;
+    background-color: rgb(4, 54, 161);
+    display: block;
+    margin-bottom: 3px;
+}
+
+.bar-label {
+    font-size: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+}
